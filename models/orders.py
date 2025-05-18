@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Float, DateTime, func
+from sqlalchemy import Column, String, Float, DateTime, func, Index
 from sqlalchemy.orm import relationship
 from connections.database import Base
 class Orders(Base):
@@ -9,3 +9,7 @@ class Orders(Base):
     total_amount = Column(Float)
     
     items = relationship("SaleItem", back_populates="order")
+
+    __table_args__ = (
+    Index("idx_order_date", "sale_date"),
+)
