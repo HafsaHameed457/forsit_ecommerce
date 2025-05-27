@@ -27,7 +27,7 @@ async def get_inventory(
         response_content = create_success_response(
             status_code=200,
             content={
-                "message": "Sales records retrieved successfully",
+                "message": "All Inventory retrieved successfully",
                 "content": data
             }
         )
@@ -58,7 +58,7 @@ async def get_low_stock(
         response_content = create_success_response(
             status_code=200,
             content={
-                "message": "Revenue analysis retrieved successfully",
+                "message": "Low stock inventory retrieved successfully",
                 "content": data
             }
         )
@@ -90,7 +90,7 @@ async def update_inventory(
         response_content = create_success_response(
             status_code=200,
             content={
-                "message": "Revenue analysis retrieved successfully",
+                "message": "Inventory updated successfully",
                 "content": data
             }
         )
@@ -122,7 +122,7 @@ async def get_inventory_history(
         response_content = create_success_response(
             status_code=200,
             content={
-                "message": "Revenue analysis retrieved successfully",
+                "message": "Inventory history fetched successfully",
                 "content": data
             }
         )

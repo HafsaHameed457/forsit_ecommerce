@@ -29,7 +29,7 @@ class GetInventory(BaseModel):
     )
 
 class InventoryUpdate(BaseModel):
-    change_amount: int = Field(
+    amount: int = Field(
         None
     )
     product_id: str = Field(

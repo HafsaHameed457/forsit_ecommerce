@@ -21,3 +21,17 @@ def serialize_row(row):
 
 def serialize_result(rows):
     return [serialize_row(row) for row in rows]
+
+
+from decimal import Decimal
+import json
+
+class DecimalEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, Decimal):
+            return float(obj)
+        return super().default(obj)
+
+
+def serialize_to_json(data):
+    return json.dumps(data, cls=DecimalEncoder)

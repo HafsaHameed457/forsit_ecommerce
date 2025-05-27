@@ -4,7 +4,6 @@ from .products import Product
 from .sale_item import SaleItem
 from .orders import Orders
 from .inventory import Inventory
-from .inventory_tracking import InventoryHistory
 
 
-__all__ = ['Category', 'Product', 'SaleItem', 'Orders', 'Inventory','InventoryHistory']
+__all__ = ['Category', 'Product', 'SaleItem', 'Orders', 'Inventory']
